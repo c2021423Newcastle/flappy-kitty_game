@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
-    public LogicScript logic;
-    public BirdScript bird;
+    [SerializeField]
+    private LogicScript logic;
+    [SerializeField]
+    private BirdScript bird;
 
     // Start is called before the first frame update
     void Start()

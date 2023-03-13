@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
-    public Text scoreText;
-    public int highScore;
-    public Text highScoreText;
-    public GameObject gameOverScreen;
+    [SerializeField]
+    private int playerScore;
+    [SerializeField]
+    private Text scoreText;
+    [SerializeField]
+    private int highScore;
+    [SerializeField]
+    private Text highScoreText;
+    [SerializeField]
+    private GameObject gameOverScreen;
 
     // Start is called before the first frame update
     void Start()

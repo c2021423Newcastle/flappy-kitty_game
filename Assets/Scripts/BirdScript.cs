@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class BirdScript : MonoBehaviour
 {
-    public Rigidbody2D myRigidbody;
-    public float flapStrength;
-    public LogicScript logic;
-    public bool alive = true;
-    public float rotateRate = 0.1F;
+    [SerializeField]
+    private Rigidbody2D myRigidbody;
+    [SerializeField]
+    private float flapStrength;
+    [SerializeField]
+    private LogicScript logic;
+    [SerializeField]
+    private bool alive = true;
+    [SerializeField]
+    private float rotateRate = 0.1F;
+    [SerializeField]
     private GameObject collidedObject;
-    public GameObject animationSprite;
-    public GameObject deadSprite;
+    [SerializeField]
+    private GameObject animationSprite;
+    [SerializeField]
+    private GameObject deadSprite;
 
     // Start is called before the first frame update
     void Start()

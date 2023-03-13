@@ -5,7 +5,8 @@ using UnityEngine;
 public class Continue : MonoBehaviour
 {
     private BirdScript birdScript;
-    public GameObject gameOverScreen;
+    [SerializeField]
+    private GameObject gameOverScreen;
 
     // Start is called before the first frame update
     void Start()
