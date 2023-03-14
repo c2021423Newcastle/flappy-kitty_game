@@ -1051,8 +1051,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 923116154}
   Flap: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
-  Die: {fileID: 8300000, guid: ff5f85da24bc943d1abdc5760a22bc81, type: 3}
-  Point: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  Coin: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  Point: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
 --- !u!4 &923116156
 Transform:
   m_ObjectHideFlags: 0
@@ -1534,6 +1534,7 @@ MonoBehaviour:
   logic: {fileID: 0}
   alive: 1
   rotateRate: 0.85
+  collidedObject: {fileID: 0}
   animationSprite: {fileID: 1418089926}
   deadSprite: {fileID: 906204790}
 --- !u!58 &1384351999
@@ -1887,7 +1888,7 @@ GameObject:
   - component: {fileID: 1590644427}
   - component: {fileID: 1590644426}
   m_Layer: 7
-  m_Name: Pipe Spawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1902,10 +1903,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1590644425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af8836bdbeb9d594d8baccc6d4ba47db, type: 3}
+  m_Script: {fileID: 11500000, guid: e1cf95d08a8305942b31e5c6e1687e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pipe: {fileID: 5722432803436872355, guid: 0cbd3e2f4dae91d44a098bfd3d88fa37, type: 3}
+  coin: {fileID: 6684874491955096237, guid: 62852bc82315fb541b52548cfdfaa660, type: 3}
   spawnRate: 2.75
   heightOffset: 6
 --- !u!4 &1590644427

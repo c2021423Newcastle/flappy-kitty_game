@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeMiddleScript : MonoBehaviour
+public class CoinScript : MonoBehaviour
 {
     [SerializeField]
     private LogicScript logic;
@@ -20,7 +20,9 @@ public class PipeMiddleScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3 && bird.GetAlive())
         {
-            logic.AddScore();
+            logic.AddCoin();
+            SFXManager.SFXInstance.Audio.PlayOneShot(SFXManager.SFXInstance.Coin);
+            Destroy(gameObject);
         }
     }
 }

@@ -6,7 +6,7 @@ public class SFXManager : MonoBehaviour
 {
     public AudioSource Audio;
     public AudioClip Flap;
-    public AudioClip Die;
+    public AudioClip Coin;
     public AudioClip Point;
 
     public static SFXManager SFXInstance;

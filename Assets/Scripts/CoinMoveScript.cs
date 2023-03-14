@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeMoveScript : MonoBehaviour
+public class CoinMoveScript : MonoBehaviour
 {
     private float moveSpeed;
     [SerializeField]
