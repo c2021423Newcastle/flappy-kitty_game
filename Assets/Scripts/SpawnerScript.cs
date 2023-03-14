@@ -16,6 +16,7 @@ public class SpawnerScript : MonoBehaviour
     private float heightOffset = 6;
     private PlayerParentScript playerScript;
     private int coinChance;
+    private int odds;
 
     // Start is called before the first frame update
     void Start()
@@ -43,13 +44,13 @@ public class SpawnerScript : MonoBehaviour
 
             
 
-            if (coinTimer < pipeSpawnRate) 
+            if (coinTimer < pipeSpawnRate)
             {
                 coinTimer += Time.deltaTime;
             }
             else 
             {
-                int rInt = Random.Range(0, 10);
+                int rInt = Random.Range(0, odds);
 
                 if (rInt < coinChance) 
                 {

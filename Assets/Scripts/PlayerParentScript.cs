@@ -11,13 +11,12 @@ public class PlayerParentScript : MonoBehaviour
 
     private bool alive = true;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        int skinNumber = PlayerPrefs.GetInt("selectedSkin", 0);
+        int charIdx = PlayerPrefs.GetInt("selectedChar", 0);
 
-        switch (skinNumber) {
+        switch (charIdx) {
             case 0:
                 Instantiate(cat, gameObject.transform);
                 break;
