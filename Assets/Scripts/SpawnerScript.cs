@@ -14,7 +14,7 @@ public class SpawnerScript : MonoBehaviour
     private float coinTimer;
     [SerializeField]
     private float heightOffset = 6;
-    private BirdScript birdScript;
+    private PlayerParentScript playerScript;
     private int coinChance;
 
     // Start is called before the first frame update
@@ -22,14 +22,14 @@ public class SpawnerScript : MonoBehaviour
     {
         coinTimer = pipeSpawnRate / 2;
         coinChance = PlayerPrefs.GetInt("difficulty", 1);
-        birdScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BirdScript>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerParentScript>();
         Spawn(pipe);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (birdScript.GetAlive())
+        if (playerScript.GetAlive())
         {
             if (pipeTimer < pipeSpawnRate)
             {

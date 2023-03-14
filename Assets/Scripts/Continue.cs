@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Continue : MonoBehaviour
 {
-    private BirdScript birdScript;
+    private PlayerScript playerScript;
     [SerializeField]
     private GameObject gameOverScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-        birdScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BirdScript>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
     }
 
     public void Reset()
     {
-        Destroy(birdScript.GetCollidedObject());
-        birdScript.ResetPosition();
+        Destroy(playerScript.GetCollidedObject());
+        playerScript.ResetPosition();
         gameOverScreen.SetActive(false);
     }
 }

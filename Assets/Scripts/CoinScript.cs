@@ -7,18 +7,18 @@ public class CoinScript : MonoBehaviour
     [SerializeField]
     private LogicScript logic;
     [SerializeField]
-    private BirdScript bird;
+    private PlayerParentScript playerScript;
 
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-        bird = GameObject.FindGameObjectWithTag("Player").GetComponent<BirdScript>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerParentScript>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3 && bird.GetAlive())
+        if (collision.gameObject.layer == 3 && playerScript.GetAlive())
         {
             logic.AddCoin();
             SFXManager.SFXInstance.Audio.PlayOneShot(SFXManager.SFXInstance.Coin);

@@ -7,7 +7,7 @@ public class PipeMoveScript : MonoBehaviour
     private float moveSpeed;
     [SerializeField]
     private float deadZone = 0;
-    private BirdScript birdScript;
+    private PlayerParentScript playerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -27,13 +27,13 @@ public class PipeMoveScript : MonoBehaviour
                 break;
         }
 
-        birdScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BirdScript>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerParentScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (birdScript.GetAlive())
+        if (playerScript.GetAlive())
         {
             transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
         }
