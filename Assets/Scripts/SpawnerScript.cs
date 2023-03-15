@@ -8,14 +8,14 @@ public class SpawnerScript : MonoBehaviour
     private GameObject pipe;
     [SerializeField]
     private GameObject coin;
-    private float pipeSpawnRate;
+    private float spawnRate;
     private float pipeTimer = 0;
     private float coinTimer;
     [SerializeField]
     private float heightOffset = 6;
     private PlayerParentScript playerScript;
     private int coinChance;
-    private int odds;
+    private int odds = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +24,17 @@ public class SpawnerScript : MonoBehaviour
 
         switch (difficulty) {
             case 1:
-                pipeSpawnRate = 4;
+                spawnRate = 4;
                 break;
             case 2:
-                pipeSpawnRate = 3;
+                spawnRate = 3;
                 break;
             case 3:
-                pipeSpawnRate = 2;
+                spawnRate = 2;
                 break;
         }
 
-        coinTimer = pipeSpawnRate / 2;
+        coinTimer = spawnRate / 2;
         coinChance = difficulty;
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerParentScript>();
         Spawn(pipe);
@@ -45,7 +45,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (playerScript.GetAlive())
         {
-            if (pipeTimer < pipeSpawnRate)
+            if (pipeTimer < spawnRate)
             {
                 pipeTimer += Time.deltaTime;
             } 
@@ -55,9 +55,7 @@ public class SpawnerScript : MonoBehaviour
                 pipeTimer = 0;
             }
 
-            
-
-            if (coinTimer < pipeSpawnRate)
+            if (coinTimer < spawnRate)
             {
                 coinTimer += Time.deltaTime;
             }

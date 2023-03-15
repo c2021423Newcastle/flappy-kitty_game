@@ -7,7 +7,7 @@ public class ResetDataScript : MonoBehaviour
 {
     public void Reset()
     {
-        PlayerPrefs.SetInt("coins", 100);
+        PlayerPrefs.SetInt("coins", 0);
         PlayerPrefs.SetInt("DOG", 0);
         PlayerPrefs.SetInt("selectedChar", 0);
         PlayerPrefs.SetInt("difficulty", 1);
