@@ -9,7 +9,12 @@ public class CoinCountScript : MonoBehaviour
     private Text text;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
+    {
+        UpdateCount();
+    }
+
+    public void UpdateCount()
     {
         text.text = PlayerPrefs.GetInt("coins", 0).ToString();
     }

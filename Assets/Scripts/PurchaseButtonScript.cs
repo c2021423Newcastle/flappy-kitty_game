@@ -7,6 +7,7 @@ public class PurchaseButtonScript : MonoBehaviour
 {
     private Character currentChar;
     private CharacterMenuScript charScript;
+    private CoinCountScript coinScript;
     [SerializeField]
     private GameObject text;
     [SerializeField]
@@ -15,6 +16,7 @@ public class PurchaseButtonScript : MonoBehaviour
     void Start()
     {
         charScript = GameObject.Find("Character Model").GetComponent<CharacterMenuScript>();
+        coinScript = GameObject.Find("Coin Count").GetComponent<CoinCountScript>();
         currentChar = charScript.GetCharList()[charScript.GetCharIdx()];
         SetText();
     }
@@ -30,6 +32,7 @@ public class PurchaseButtonScript : MonoBehaviour
             PlayerPrefs.SetInt("coins", coins - currentChar.GetPrice());
             PlayerPrefs.SetInt("selectedChar", charScript.GetCharIdx());
             SetText();
+            coinScript.UpdateCount();
         }
     }
 
