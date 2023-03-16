@@ -8,11 +8,9 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D myRigidbody;
     [SerializeField]
     private float flapStrength;
-    [SerializeField]
     private LogicScript logic;
     [SerializeField]
     private float rotateRate = 0.1F;
-    [SerializeField]
     private GameObject collidedObject;
     [SerializeField]
     private GameObject animationSprite;

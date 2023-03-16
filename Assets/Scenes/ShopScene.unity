@@ -2022,6 +2022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b6332812b0bd24a826365d89f2a83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bird: {fileID: 9100000, guid: 52ee915262f6c714fb0ebccf21f67876, type: 2}
   cat: {fileID: 9100000, guid: 39d803805ffbd6f47bb4dfe7cb9385d9, type: 2}
   dog: {fileID: 9100000, guid: 69a93d637d3ad2444ac3b9e91f809304, type: 2}
   button: {fileID: 1893263269}

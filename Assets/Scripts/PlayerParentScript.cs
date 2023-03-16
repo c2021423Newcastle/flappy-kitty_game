@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerParentScript : MonoBehaviour
 {
     [SerializeField]
+    private GameObject bird;
+    [SerializeField]
     private GameObject cat;
     [SerializeField]
     private GameObject dog;
@@ -18,9 +20,12 @@ public class PlayerParentScript : MonoBehaviour
 
         switch (charIdx) {
             case 0:
-                Instantiate(cat, gameObject.transform);
+                Instantiate(bird, gameObject.transform);
                 break;
             case 1:
+                Instantiate(cat, gameObject.transform);
+                break;
+            case 2:
                 Instantiate(dog, gameObject.transform);
                 break;
         }

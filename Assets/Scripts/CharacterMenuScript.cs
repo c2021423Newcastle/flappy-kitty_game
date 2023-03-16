@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CharacterMenuScript : MonoBehaviour
 {
     [SerializeField]
+    private RuntimeAnimatorController bird;
+    [SerializeField]
     private RuntimeAnimatorController cat;
     [SerializeField]
     private RuntimeAnimatorController dog;
@@ -21,8 +23,9 @@ public class CharacterMenuScript : MonoBehaviour
     {   
         charIdx = PlayerPrefs.GetInt("selectedChar", 0);
 
-        chars.Add(new Character("CAT", cat, 0, 1));
-        chars.Add(new Character("DOG", dog, 10, PlayerPrefs.GetInt("DOG", 0)));
+        chars.Add(new Character("BIRD", bird, 0, 1));
+        chars.Add(new Character("CAT", cat, 10, PlayerPrefs.GetInt("CAT", 0)));
+        chars.Add(new Character("DOG", dog, 20, PlayerPrefs.GetInt("DOG", 0)));
         
         max = chars.Count;
 
